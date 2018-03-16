@@ -10,16 +10,14 @@ import android.widget.Button;
 
 public class SecondActivity extends AppCompatActivity {
 
-    private Button btn;
+     Button nextPageButton2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        btn = (Button) findViewById(R.id.button2);
-        btn.setOnClickListener(new View.OnClickListener() {
+        nextPageButton2 = (Button) findViewById(R.id.addButton);
+        nextPageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SecondActivity();
@@ -27,7 +25,7 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
     public void SecondActivity(){
-        Intent intent = new Intent(this, SecondActivity.class);
+        Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
 
     }
